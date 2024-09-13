@@ -1,9 +1,11 @@
 ---
 import Layout from "@/layouts/Layout.astro"
+import Loading from "@/components/sections/Loading.astro"
 import Mode from "@/components/sections/Mode.astro"
 import Hero from "@/components/sections/Hero.astro"
 import Tabla from "@/components/sections/Tabla.astro"
 import Footer from "@/components/Footer.astro"
+
 
 import { basics } from "@table"
 const { name, project } = basics
@@ -13,6 +15,7 @@ const { name, project } = basics
 <Layout title= {`Sitio Web by ${name} - ${project}`} >
 	
 	<main>
+		<Loading />
 		<Mode />
 		<Hero />
 		<Tabla />
@@ -28,7 +31,7 @@ const { name, project } = basics
     padding: 4rem;
     margin: auto;
     width: 100%;
-	background-color: aqua;
+	
   }
 
   @media (width <= 700px) {
